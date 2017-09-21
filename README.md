@@ -16,4 +16,4 @@ docker-compose up
 ```
 
 ## something?
-- todo
+- 歴史上の人物
