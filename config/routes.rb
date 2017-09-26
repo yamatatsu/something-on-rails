@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
   root controller: :top, action: :index
 
-  resources :people, only: %w[index]
+  namespace :ikeda_note do
+    resources :people, only: %w[index]
+  end
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
