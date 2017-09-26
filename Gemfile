@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'devise'
 gem 'pry', require: false
 gem 'pry-byebug', require: false
 gem 'pry-rails', require: 'pry-rails/console'
@@ -40,6 +41,7 @@ end
 
 group :development do
   gem 'annotate'
+  gem 'letter_opener_web'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rails-erd'
   gem 'rubocop', require: false
