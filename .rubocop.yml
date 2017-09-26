@@ -1,0 +1,28 @@
+AllCops:
+  Exclude:
+    - bin/*
+    - db/schema.rb
+    - lib/tasks/auto_annotate_models.rake
+    - spec/spec_helper.rb
+    - spec/rails_helper.rb
+    - Gemfile
+Style/LineLength:
+  Max: 120
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
+AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+Layout/MultilineMethodCallBraceLayout:
+  Enabled: false
+Style/IfUnlessModifier:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/BracesAroundHashParameters:
+  Enabled: false
+Style/EmptyMethod:
+  Enabled: false
