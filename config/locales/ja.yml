@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    attributes:
+      event:
+        name: 出来事名
+        occurrence_year: 西暦

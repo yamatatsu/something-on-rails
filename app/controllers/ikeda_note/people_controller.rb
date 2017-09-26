@@ -1,4 +1,4 @@
-class IkedaNote::PeopleController < ApplicationController
+class IkedaNote::PeopleController < IkedaNote::ApplicationController
   def index
   end
 end

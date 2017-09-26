@@ -1,0 +1,13 @@
+h1 出来事
+
+table.table
+  thead
+    tr
+      th = Event.human_attribute_name :name
+      th = Event.human_attribute_name :occurrence_year
+
+  tbody
+    - @events.each do |event|
+      tr
+        td = event.name
+        td = event.occurrence_year + '年'

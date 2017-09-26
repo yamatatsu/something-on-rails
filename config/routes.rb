@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root controller: :top, action: :index
 
   namespace :ikeda_note do
+    resources :events, only: %w[index]
     resources :people, only: %w[index]
+    resources :teams, only: %w[index]
   end
 
   if Rails.env.development?

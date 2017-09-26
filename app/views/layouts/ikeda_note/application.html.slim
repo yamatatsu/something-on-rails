@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title something on rails
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  body
+
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          = link_to root_path, class: 'navbar-brand' 
+            | something on rails
+
+        .navbar-header
+          = link_to ikeda_note_events_path, class: 'navbar-brand' 
+            | 歴史ノート
+          
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              = link_to ikeda_note_events_path
+                | 出来事
+            li
+              = link_to ikeda_note_people_path
+                | 人物
+            li
+              = link_to ikeda_note_teams_path
+                | 国
+
+    = yield
