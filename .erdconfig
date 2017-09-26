@@ -1,0 +1,6 @@
+exclude: 'ActiveRecord::InternalMetadata, ActiveRecord::SchemaMigration'
+
+attributes:
+  - content
+  - foreign_key
+  - inheritance

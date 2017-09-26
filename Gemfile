@@ -18,11 +18,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'slim-rails'
 gem 'pry', require: false
 gem 'pry-byebug', require: false
 gem 'pry-rails', require: 'pry-rails/console'
 gem 'pry-stack_explorer', require: false
+gem 'seed-fu', '~> 2.3'
+gem 'slim-rails'
 
 # bootstrap
 gem 'bootstrap_form'
