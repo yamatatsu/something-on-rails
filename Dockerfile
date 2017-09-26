@@ -26,6 +26,12 @@ RUN apk update && \
     zlib-dev
 RUN gem install bundler
 
+# bundle install
+WORKDIR /tmp
+COPY Gemfile /tmp
+COPY Gemfile.lock /tmp
+RUN bundle install
+
 # workdir作成
 ENV APP_HOME /myapp
 RUN mkdir -p $APP_HOME
