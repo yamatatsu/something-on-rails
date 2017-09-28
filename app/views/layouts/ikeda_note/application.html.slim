@@ -8,7 +8,7 @@ html
 
   body
 
-    nav.navbar.navbar-default
+    nav.navbar.navbar-inverse
       .container-fluid
         .navbar-header
           = link_to root_path, class: 'navbar-brand' 
@@ -30,4 +30,5 @@ html
               = link_to ikeda_note_teams_path
                 | 国
 
-    = yield
+    .container
+      = yield

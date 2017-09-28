@@ -1,0 +1,7 @@
+h1 [出来事] 新規作成
+
+= bootstrap_form_for(@event, url: ikeda_note_events_path) do |f|
+  = f.text_field :name
+  = f.text_field :occurrence_year
+
+  = f.submit "登録"
