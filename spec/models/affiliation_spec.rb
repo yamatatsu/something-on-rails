@@ -21,8 +21,5 @@
 #  fk_rails_...  (team_id => teams.id)
 #
 
-require 'rails_helper'
-
-RSpec.describe Affiliation, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Affiliation, type: :model do
 end

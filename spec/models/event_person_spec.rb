@@ -19,8 +19,5 @@
 #  fk_rails_...  (person_id => people.id)
 #
 
-require 'rails_helper'
-
-RSpec.describe EventPerson, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe EventPerson, type: :model do
 end
