@@ -9,10 +9,10 @@ class IkedaNote::EventsController < IkedaNote::ApplicationController
 
   def create
     event = current_user.events.build(event_params)
-    if event.valid?
-      event.save
-      redirect_to action: :index
-    end
+    return unless event.valid?
+
+    event.save
+    redirect_to action: :index
   end
 
   private

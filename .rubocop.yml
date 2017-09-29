@@ -6,16 +6,11 @@ AllCops:
     - spec/spec_helper.rb
     - spec/rails_helper.rb
     - Gemfile
-Style/LineLength:
-  Max: 120
+    - Guardfile
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: comma
-AlignParameters:
-  EnforcedStyle: with_fixed_indentation
-Layout/MultilineMethodCallBraceLayout:
-  Enabled: false
 Style/IfUnlessModifier:
   Enabled: false
 Style/ClassAndModuleChildren:
@@ -25,4 +20,21 @@ Style/Documentation:
 Style/BracesAroundHashParameters:
   Enabled: false
 Style/EmptyMethod:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - 'config/**/*'
+Metrics/BlockLength:
+  Exclude:
+    - 'config/**/*'
+    - 'spec/**/*'
+Metrics/MethodLength:
+  Exclude:
+    - 'db/**/*'
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+Layout/MultilineMethodCallBraceLayout:
   Enabled: false
