@@ -9,10 +9,21 @@
 ~~rspec~~
 ~~annotate~~
 ~~pry~~
+~~rubocop~~
+~~guard~~
+~~livereload~~
 
 ## usage
+
+### railsの実行
 ```
 docker-compose up
+```
+
+## ガードサーバーの起動
+rubocop と livereload
+```
+docker-compose run --rm -p 35729:35729 web bundle exec guard
 ```
 
 ## something?

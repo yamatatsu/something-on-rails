@@ -42,12 +42,15 @@ end
 
 group :development do
   gem 'annotate'
+  gem 'guard-livereload', require: false
+  gem 'guard-rubocop', require: false
   gem 'letter_opener_web'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rails-erd'
   gem 'rubocop', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'terminal-notifier-guard', require: false
   gem 'web-console', '>= 3.3.0'
 end
 
