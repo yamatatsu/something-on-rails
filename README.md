@@ -28,3 +28,6 @@ docker-compose run --rm -p 35729:35729 web bundle exec guard
 
 ## something?
 - 歴史上の人物
+
+## ER図
+https://github.com/yamatatsu/something-on-rails/blob/master/erd.pdf
