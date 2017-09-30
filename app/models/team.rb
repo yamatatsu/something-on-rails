@@ -19,5 +19,5 @@
 #
 
 class Team < ApplicationRecord
-  has_many :affiliations, dependent: :destroy
+  has_many :people
 end

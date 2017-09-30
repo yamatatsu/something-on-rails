@@ -12,18 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20170926105742) do
 
-  create_table "affiliations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
-    t.bigint "person_id", null: false
-    t.bigint "team_id", null: false
-    t.string "affiliation_year"
-    t.string "dissociation_year"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["person_id", "team_id"], name: "index_affiliations_on_person_id_and_team_id", unique: true
-    t.index ["person_id"], name: "index_affiliations_on_person_id"
-    t.index ["team_id"], name: "index_affiliations_on_team_id"
-  end
-
   create_table "event_people", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.bigint "event_id", null: false
     t.bigint "person_id", null: false
@@ -45,10 +33,12 @@ ActiveRecord::Schema.define(version: 20170926105742) do
 
   create_table "people", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string "name", null: false
+    t.bigint "team_id"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_people_on_name"
+    t.index ["team_id"], name: "index_people_on_team_id"
     t.index ["user_id"], name: "index_people_on_user_id"
   end
 
@@ -78,11 +68,10 @@ ActiveRecord::Schema.define(version: 20170926105742) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "affiliations", "people"
-  add_foreign_key "affiliations", "teams"
   add_foreign_key "event_people", "events"
   add_foreign_key "event_people", "people"
   add_foreign_key "events", "users"
+  add_foreign_key "people", "teams"
   add_foreign_key "people", "users"
   add_foreign_key "teams", "users"
 end
