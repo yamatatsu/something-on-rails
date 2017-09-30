@@ -1,5 +1,6 @@
 class IkedaNote::EventsController < IkedaNote::ApplicationController
   before_action :set_event, only: %i[edit update destroy]
+  before_action :set_people, only: %i[new edit]
 
   def index
     @events = current_user.events
@@ -20,6 +21,7 @@ class IkedaNote::EventsController < IkedaNote::ApplicationController
   end
 
   def edit
+    @people = current_user.people
   end
 
   def update
@@ -44,5 +46,9 @@ class IkedaNote::EventsController < IkedaNote::ApplicationController
   def set_event
     # TODO: notFoundのハンドリング
     @event = current_user.events.find(params[:id])
+  end
+
+  def set_people
+    @people = current_user.people
   end
 end

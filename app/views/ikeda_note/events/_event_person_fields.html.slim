@@ -1,7 +1,6 @@
 .nested-fields
   .row
     .col-sm-3
-      = f.text_field :person_id, label: '登場人物'
+      = f.select :person_id, @people.pluck(:name, :id), hide_label: true
     .col-sm-3
-      .delete-event-people-btn
-        = link_to_remove_association "削除", f, class: 'btn btn-default'
+      = link_to_remove_association "削除", f, class: 'btn btn-default'

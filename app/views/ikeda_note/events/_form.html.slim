@@ -1,8 +1,11 @@
 = f.text_field :name
 = f.text_field :occurrence_year
-= f.fields_for :event_people do |event_person_f|
-  = render 'event_person_fields', f: event_person_f
-.links
-  = link_to_add_association '人物追加', f, :event_people
+
+.form-group.form-group-event-people
+  label.control-label 登場人物
+  = f.fields_for :event_people do |event_person_f|
+    = render 'event_person_fields', f: event_person_f
+  .links
+    = link_to_add_association '人物追加', f, :event_people, class: 'btn btn-default'
 
 = f.submit submit_btn_title, class: 'btn btn-primary'
