@@ -10,8 +10,9 @@
 #
 # Indexes
 #
-#  index_event_people_on_event_id   (event_id)
-#  index_event_people_on_person_id  (person_id)
+#  index_event_people_on_event_id                (event_id)
+#  index_event_people_on_event_id_and_person_id  (event_id,person_id) UNIQUE
+#  index_event_people_on_person_id               (person_id)
 #
 # Foreign Keys
 #

@@ -6,5 +6,7 @@ class CreateEventPeople < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+
+    add_index :event_people, [:event_id, :person_id], unique: true
   end
 end

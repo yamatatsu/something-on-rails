@@ -12,8 +12,9 @@
 #
 # Indexes
 #
-#  index_affiliations_on_person_id  (person_id)
-#  index_affiliations_on_team_id    (team_id)
+#  index_affiliations_on_person_id              (person_id)
+#  index_affiliations_on_person_id_and_team_id  (person_id,team_id) UNIQUE
+#  index_affiliations_on_team_id                (team_id)
 #
 # Foreign Keys
 #

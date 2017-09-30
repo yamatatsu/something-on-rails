@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20170926105742) do
     t.string "dissociation_year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["person_id", "team_id"], name: "index_affiliations_on_person_id_and_team_id", unique: true
     t.index ["person_id"], name: "index_affiliations_on_person_id"
     t.index ["team_id"], name: "index_affiliations_on_team_id"
   end
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170926105742) do
     t.bigint "person_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["event_id", "person_id"], name: "index_event_people_on_event_id_and_person_id", unique: true
     t.index ["event_id"], name: "index_event_people_on_event_id"
     t.index ["person_id"], name: "index_event_people_on_person_id"
   end
