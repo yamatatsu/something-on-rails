@@ -1,11 +1,4 @@
 h1 [出来事] 新規作成
 
 = bootstrap_form_for(@event, url: ikeda_note_events_path) do |f|
-  = f.text_field :name
-  = f.text_field :occurrence_year
-  = f.fields_for :event_people do |event_person_f|
-    = render 'event_person_fields', f: event_person_f
-  .links
-    = link_to_add_association '人物追加', f, :event_people
-
-  = f.submit "登録", class: 'btn btn-primary'
+  = render 'form', f: f, submit_btn_title: '登録'
