@@ -21,6 +21,8 @@ Style/BracesAroundHashParameters:
   Enabled: false
 Style/EmptyMethod:
   Enabled: false
+Style/AsciiComments:
+  Enabled: false
 
 Metrics/LineLength:
   Max: 120

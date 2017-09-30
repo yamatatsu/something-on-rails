@@ -5,12 +5,18 @@ table.table
     tr
       th = Event.human_attribute_name :name
       th = Event.human_attribute_name :occurrence_year
+      th
+      th
 
   tbody
     - @events.each do |event|
       tr
         td = event.name
         td = event.occurrence_year + '年'
+        td = link_to edit_ikeda_note_event_path(id: event.id), class: 'btn btn-primary'
+          | 編集
+        td = link_to ikeda_note_event_path(id: event.id), class: 'btn btn-danger', method: :delete
+          | 削除
 
 = link_to new_ikeda_note_event_path, class: 'btn btn-primary'
   | 新規登録

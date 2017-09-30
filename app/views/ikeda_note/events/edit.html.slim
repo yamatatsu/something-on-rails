@@ -1,0 +1,7 @@
+h1 [出来事] 編集
+
+= bootstrap_form_for(@event, url: ikeda_note_event_path(id: @event.id), method: :put) do |f|
+  = f.text_field :name
+  = f.text_field :occurrence_year
+
+  = f.submit "変更", class: 'btn btn-primary'

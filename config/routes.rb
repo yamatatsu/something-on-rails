@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root controller: :top, action: :index
 
   namespace :ikeda_note do
-    resources :events, only: %w[index new create]
+    resources :events, only: %w[index new create edit update destroy]
     resources :people, only: %w[index]
     resources :teams, only: %w[index]
   end
