@@ -1,3 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "rails_bootstrap_forms";
+
+.delete-event-people-btn {
+  margin-top: 24px; // TODO: 消せたら消したいね
+}

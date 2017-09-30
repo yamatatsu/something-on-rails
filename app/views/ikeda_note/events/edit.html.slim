@@ -3,5 +3,9 @@ h1 [出来事] 編集
 = bootstrap_form_for(@event, url: ikeda_note_event_path(id: @event.id), method: :put) do |f|
   = f.text_field :name
   = f.text_field :occurrence_year
+  = f.fields_for :event_people do |event_person_f|
+    = render 'event_person_fields', f: event_person_f
+  .links
+    = link_to_add_association '人物追加', f, :event_people
 
   = f.submit "変更", class: 'btn btn-primary'

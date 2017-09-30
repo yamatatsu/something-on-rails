@@ -7,6 +7,7 @@ class IkedaNote::EventsController < IkedaNote::ApplicationController
 
   def new
     @event = Event.new
+    @event.event_people.build
   end
 
   def create
@@ -35,7 +36,9 @@ class IkedaNote::EventsController < IkedaNote::ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:name, :occurrence_year)
+    params
+      .require(:event)
+      .permit(:name, :occurrence_year, event_people_attributes: [:id, :person_id, :_destroy])
   end
 
   def set_event

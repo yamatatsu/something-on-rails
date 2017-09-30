@@ -1,0 +1,7 @@
+.nested-fields
+  .row
+    .col-sm-3
+      = f.text_field :person_id, label: '登場人物'
+    .col-sm-3
+      .delete-event-people-btn
+        = link_to_remove_association "削除", f, class: 'btn btn-default'
