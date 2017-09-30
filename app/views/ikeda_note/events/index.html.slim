@@ -5,6 +5,7 @@ table.table
     tr
       th = Event.human_attribute_name :name
       th = Event.human_attribute_name :occurrence_year
+      th 関連
       th
       th
 
@@ -13,6 +14,11 @@ table.table
       tr
         td = event.name
         td = event.occurrence_year + '年'
+        td
+          - event.teams.each do |team|
+            span.label style="background-color: #{team.color_code}"
+              = team.name
+            span = ' '
         td = link_to edit_ikeda_note_event_path(id: event.id), class: 'btn btn-primary'
           | 編集
         td = link_to ikeda_note_event_path(id: event.id), class: 'btn btn-danger', method: :delete
