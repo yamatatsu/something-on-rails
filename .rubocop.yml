@@ -23,6 +23,8 @@ Style/EmptyMethod:
   Enabled: false
 Style/AsciiComments:
   Enabled: false
+Style/SymbolArray:
+  Enabled: false
 
 Metrics/LineLength:
   Max: 120
@@ -40,3 +42,6 @@ Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 Layout/MultilineMethodCallBraceLayout:
   Enabled: false
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+  IndentationWidth: 2

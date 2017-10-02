@@ -1,8 +1,6 @@
 gi = Team.find_by(name: '魏')
 go = Team.find_by(name: '呉')
 shoku = Team.find_by(name: '蜀')
-other = Team.find_by(name: '他')
-
 
 Person.seed(:id,
   { id: 1, user_id: 1, name: '劉備玄徳', team: shoku },
