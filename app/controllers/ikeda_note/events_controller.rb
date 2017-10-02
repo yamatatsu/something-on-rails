@@ -18,7 +18,7 @@ class IkedaNote::EventsController < IkedaNote::ApplicationController
 
     # TODO: バリデーション
     event.save
-    redirect_to action: :index
+    redirect_to({action: :index}, notice: '作成しました')
   end
 
   def edit
@@ -28,12 +28,12 @@ class IkedaNote::EventsController < IkedaNote::ApplicationController
   def update
     # TODO: バリデーション
     @event.update!(event_params)
-    redirect_to action: :index
+    redirect_to({action: :index}, notice: '更新しました')
   end
 
   def destroy
     @event.destroy
-    redirect_to action: :index
+    redirect_to({action: :index}, notice: '削除しました')
   end
 
   private
