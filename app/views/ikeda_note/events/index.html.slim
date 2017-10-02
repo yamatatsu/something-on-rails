@@ -23,7 +23,7 @@ table.table
             span = ' '
         td = link_to edit_ikeda_note_event_path(id: event.id), class: 'btn btn-primary'
           | 編集
-        td = link_to ikeda_note_event_path(id: event.id), class: 'btn btn-danger', method: :delete
+        td = link_to ikeda_note_event_path(id: event.id), class: 'btn btn-danger', method: :delete, data: { confirm: "本当に削除しますか？" }
           | 削除
 
 = link_to new_ikeda_note_event_path, class: 'btn btn-primary'
