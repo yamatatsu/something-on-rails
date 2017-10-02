@@ -3,7 +3,8 @@ class IkedaNote::EventsController < IkedaNote::ApplicationController
   before_action :set_people, only: %i[new edit]
 
   def index
-    @events = current_user.events
+    @events = Event.includes(people: :team)
+      .where(user: current_user)
   end
 
   def new
