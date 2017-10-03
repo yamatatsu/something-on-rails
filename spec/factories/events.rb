@@ -4,7 +4,7 @@
 #
 #  id              :integer          not null, primary key
 #  name            :string(255)      not null
-#  occurrence_year :string(255)
+#  occurrence_year :integer
 #  user_id         :integer          not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null

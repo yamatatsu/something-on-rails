@@ -15,7 +15,7 @@ table.table
     - @events.each do |event|
       tr
         td = event.name
-        td = event.occurrence_year + '年'
+        td = "#{event.occurrence_year}年"
         td
           - event.teams.each do |team|
             span.label style="background-color: #{team.color_code}"
