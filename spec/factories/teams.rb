@@ -20,5 +20,8 @@
 
 FactoryGirl.define do
   factory :team do
+    name 'team_name'
+    color_code '#000'
+    user
   end
 end

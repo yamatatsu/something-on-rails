@@ -23,5 +23,8 @@
 
 FactoryGirl.define do
   factory :person do
+    name 'person_name'
+    user
+    team
   end
 end

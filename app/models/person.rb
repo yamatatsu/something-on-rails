@@ -22,6 +22,7 @@
 #
 
 class Person < ApplicationRecord
+  belongs_to :user
   belongs_to :team
   has_many :event_people, dependent: :destroy
   has_many :events, through: :event_people
