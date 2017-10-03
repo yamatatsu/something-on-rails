@@ -22,7 +22,6 @@ class IkedaNote::EventsController < IkedaNote::ApplicationController
   end
 
   def edit
-    @people = current_user.people
   end
 
   def update
