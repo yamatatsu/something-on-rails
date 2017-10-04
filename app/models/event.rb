@@ -25,6 +25,9 @@ class Event < ApplicationRecord
 
   accepts_nested_attributes_for :event_people, reject_if: :all_blank, allow_destroy: true
 
+  validates :name, presence: true, length: { maximum: 30 }
+  validates :occurrence_year, presence: true, numericality: { only_integer: true }
+
   def teams
     people.map(&:team).uniq
   end

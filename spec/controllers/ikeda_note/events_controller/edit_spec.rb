@@ -20,5 +20,10 @@ describe IkedaNote::EventsController, type: :controller do
       subject
       expect(response).to render_template :edit
     end
+
+    it '@event がassignされること' do
+      subject
+      expect(assigns(:event)).to eq(event_1)
+    end
   end
 end

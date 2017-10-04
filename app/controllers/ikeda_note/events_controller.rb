@@ -1,6 +1,6 @@
 class IkedaNote::EventsController < IkedaNote::ApplicationController
   before_action :set_event, only: %i[edit update destroy]
-  before_action :set_people, only: %i[new edit]
+  before_action :set_people, only: %i[new create edit update]
 
   def index
     @events = Event.includes(people: :team)
@@ -13,21 +13,24 @@ class IkedaNote::EventsController < IkedaNote::ApplicationController
   end
 
   def create
-    event = current_user.events.build(event_params)
-    return unless event.valid?
-
-    # TODO: バリデーション
-    event.save
-    redirect_to({ action: :index }, notice: '作成しました')
+    @event = current_user.events.build(event_params)
+    if @event.valid?
+      @event.save!
+      redirect_to({ action: :index }, notice: '作成しました')
+    else
+      render action: :new
+    end
   end
 
   def edit
   end
 
   def update
-    # TODO: バリデーション
-    @event.update!(event_params)
-    redirect_to({ action: :index }, notice: '更新しました')
+    if @event.update(event_params)
+      redirect_to({ action: :index }, notice: '更新しました')
+    else
+      render action: :edit
+    end
   end
 
   def destroy

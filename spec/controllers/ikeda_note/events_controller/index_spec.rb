@@ -29,7 +29,7 @@ describe IkedaNote::EventsController, type: :controller do
       expect(response).to render_template :index
     end
 
-    it '@event が作られること' do
+    it '@events がassignされること' do
       subject
       expect(assigns(:events)).to eq([event_1, event_2])
     end

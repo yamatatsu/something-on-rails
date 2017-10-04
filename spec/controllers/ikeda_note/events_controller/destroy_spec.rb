@@ -22,5 +22,7 @@ describe IkedaNote::EventsController, type: :controller do
     end
 
     it { expect { subject }.to change { Event.count }.by(-1) }
+    it { expect { subject }.to change { EventPerson.count }.by(-2) }
+    it { expect { subject }.to change { Person.count }.by(0) }
   end
 end
