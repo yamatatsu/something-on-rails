@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20170926105742) do
 
   create_table "people", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string "name", null: false
-    t.bigint "team_id"
+    t.bigint "team_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

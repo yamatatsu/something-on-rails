@@ -4,8 +4,8 @@
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)      not null
+#  team_id    :integer          not null
 #  user_id    :integer          not null
-#  team_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
