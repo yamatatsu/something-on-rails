@@ -1,5 +1,5 @@
-- flash.each do |_, message|
-  .alert.fade.in.alert-info
+- flash.each do |key, message|
+  .alert.fade.in class="#{key == 'alert' ? 'alert-danger' : 'alert-info' }"
     button.close data-dismiss="alert"
       | ×
     = message

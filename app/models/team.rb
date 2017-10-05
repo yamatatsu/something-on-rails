@@ -20,7 +20,7 @@
 
 class Team < ApplicationRecord
   belongs_to :user
-  has_many :people
+  has_many :people, dependent: :restrict_with_error # 人物が消されるとショック大きそうだからエラーにしておく
 
   validates :name, presence: true, length: { maximum: 20 }
 end

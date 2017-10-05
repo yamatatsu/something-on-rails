@@ -31,8 +31,11 @@ class IkedaNote::TeamsController < IkedaNote::ApplicationController
   end
 
   def destroy
-    @team.destroy
-    redirect_to({ action: :index }, notice: '削除しました')
+    if @team.destroy
+      redirect_to({ action: :index }, notice: '削除しました')
+    else
+      redirect_to({ action: :index }, alert: @team.errors.full_messages.to_sentence)
+    end
   end
 
   private

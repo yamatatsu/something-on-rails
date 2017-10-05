@@ -12,11 +12,25 @@ describe IkedaNote::TeamsController, type: :controller do
       sign_in logined_user, scope: :user
     end
 
-    it do
-      subject
-      expect(response).to redirect_to action: :index
+    context '正常系' do
+      it do
+        subject
+        expect(response).to redirect_to action: :index
+      end
+
+      it { expect { subject }.to change { Team.count }.by(-1) }
     end
 
-    it { expect { subject }.to change { Team.count }.by(-1) }
+    context '異常系 perpleが紐付いているとき' do
+      before do
+        create(:person, team: team_1, user: logined_user)
+        subject
+      end
+
+      it { expect(response).to redirect_to action: :index }
+      it { expect(assigns(:team).errors.full_messages).to include("Cannot delete record because dependent people exist") }
+
+      it { expect { subject }.to change { Team.count }.by(0) }
+    end
   end
 end
