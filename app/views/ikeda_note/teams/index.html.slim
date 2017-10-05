@@ -1,1 +1,24 @@
-p 国
+h1 国
+
+table.table
+  thead
+    tr
+      th = Team.human_attribute_name :name
+      th = Team.human_attribute_name :color_code
+      th
+      th
+
+  tbody
+    - @teams.each do |team|
+      tr
+        td = team.name
+        td
+          span.label style="background-color: #{team.color_code}"
+            = team.color_code
+        td = link_to edit_ikeda_note_team_path(id: team.id), class: 'btn btn-primary'
+          | 編集
+        td = link_to ikeda_note_team_path(id: team.id), class: 'btn btn-danger', method: :delete, data: { confirm: "本当に削除しますか？" }
+          | 削除
+
+= link_to new_ikeda_note_team_path, class: 'btn btn-primary'
+  | 新規登録

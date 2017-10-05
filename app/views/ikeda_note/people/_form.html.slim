@@ -1,0 +1,4 @@
+= f.text_field :name
+= f.select :team_id, @teams.pluck(:name, :id)
+
+= f.submit submit_btn_title, class: 'btn btn-primary'

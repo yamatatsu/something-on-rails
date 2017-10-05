@@ -1,1 +1,24 @@
-p 歴史上の人物
+h1 人物
+
+table.table
+  thead
+    tr
+      th = Person.human_attribute_name :name
+      th = Person.human_attribute_name :team_name
+      th
+      th
+
+  tbody
+    - @people.each do |person|
+      tr
+        td = person.name
+        td
+          span.label style="background-color: #{person.team_color_code}"
+            = person.team_name
+        td = link_to edit_ikeda_note_person_path(id: person.id), class: 'btn btn-primary'
+          | 編集
+        td = link_to ikeda_note_person_path(id: person.id), class: 'btn btn-danger', method: :delete, data: { confirm: "本当に削除しますか？" }
+          | 削除
+
+= link_to new_ikeda_note_person_path, class: 'btn btn-primary'
+  | 新規登録

@@ -3,4 +3,10 @@ ja:
     attributes:
       event:
         name: 出来事名
-        occurrence_year: 西暦
+        team: 西暦
+      person:
+        name: 名前
+        team_name: 所属国
+      team:
+        name: 名前
+        color_code: 色

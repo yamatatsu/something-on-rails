@@ -30,5 +30,8 @@ html
               = link_to ikeda_note_teams_path
                 | 国
 
+
+
     .container
+      = render 'shared/notice_alert', flash: flash
       = yield

@@ -27,5 +27,7 @@ class Person < ApplicationRecord
   has_many :event_people, dependent: :destroy
   has_many :events, through: :event_people
 
-  delegate :color_code, to: :team, prefix: true
+  delegate :name, :color_code, to: :team, prefix: true
+
+  validates :name, presence: true, length: { maximum: 20 }
 end

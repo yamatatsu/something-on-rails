@@ -1,0 +1,4 @@
+h1 [国] 編集
+
+= bootstrap_form_for(@team, url: ikeda_note_team_path(id: @team.id), method: :put) do |f|
+  = render 'form', f: f, submit_btn_title: '変更'

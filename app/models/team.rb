@@ -21,4 +21,6 @@
 class Team < ApplicationRecord
   belongs_to :user
   has_many :people
+
+  validates :name, presence: true, length: { maximum: 20 }
 end
