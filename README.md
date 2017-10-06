@@ -34,9 +34,9 @@ docker-compose up
 #### 2.db構築
 別プロセスで
 ```
-docker-compose run --rm web db:create
-docker-compose run --rm web db:migrate
-docker-compose run --rm web db:seed
+docker-compose run --rm web rails db:create
+docker-compose run --rm web rails db:migrate
+docker-compose run --rm web rails db:seed
 ```
 
 #### 3.アクセス
@@ -49,5 +49,11 @@ shiki@shiki.boon / murasaki
 ### ガードサーバーの起動
 rubocop と livereload
 ```
-docker-compose run --rm -p 35729:35729 web bundle exec guard
+bin/docker-guard
+```
+
+### imageのpush
+gem追加したらやっくと楽だよ
+```
+bin/docker-push
 ```

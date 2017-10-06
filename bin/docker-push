@@ -1,6 +1,4 @@
 #! /bin/bash
-docker commit somethingonrails_web_1 yamatatsu193/somethingonrails_web:latest
-docker commit somethingonrails_db_1 yamatatsu193/somethingonrails_db:latest
-
+docker commit somethingonrails_web_1 somethingonrails_web:latest
+docker tag somethingonrails_web:latest yamatatsu193/somethingonrails_web:latest
 docker push yamatatsu193/somethingonrails_web:latest
-docker push yamatatsu193/somethingonrails_db:latest
