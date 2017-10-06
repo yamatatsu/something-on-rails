@@ -2,17 +2,17 @@
 自分のリポジトリ見たら真面目にrails書いているのが一個もなくて、じゃあなんか書くかってなった何かのrails
 
 とりあえずこのへんをinitしとこう
-~~docker(ruby)~~
-~~rails~~
-~~slim~~
-~~mysql~~
-~~rspec~~
-~~annotate~~
-~~pry~~
-~~rubocop~~
-~~guard~~
-~~livereload~~
-~~bullet~~
+- ~~docker(ruby)~~
+- ~~rails~~
+- ~~slim~~
+- ~~mysql~~
+- ~~rspec~~
+- ~~annotate~~
+- ~~pry~~
+- ~~rubocop~~
+- ~~guard~~
+- ~~livereload~~
+- ~~bullet~~
 
 ## something?
 - 歴史上の人物
@@ -43,8 +43,8 @@ docker-compose run --rm web rails db:seed
 `localhost:3010` にアクセス
 
 seedで作られるアカウント
-id / pass
-shiki@shiki.boon / murasaki
+- id / pass
+  - shiki@shiki.boon / murasaki
 
 ### ガードサーバーの起動
 rubocop と livereload
