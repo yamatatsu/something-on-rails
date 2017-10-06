@@ -40,4 +40,4 @@ WORKDIR $APP_HOME
 # applicationの実行
 COPY . $APP_HOME
 EXPOSE 3010
-CMD ["rails", "server", "-p", "3000", "-b", "0.0.0.0"]
+CMD ["rails", "server", "-p", "3010", "-b", "0.0.0.0"]
