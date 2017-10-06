@@ -5,6 +5,7 @@ class IkedaNote::EventsController < IkedaNote::ApplicationController
   def index
     @events = Event.includes(people: :team)
       .where(user: current_user)
+      .order(:occurrence_year)
   end
 
   def new
