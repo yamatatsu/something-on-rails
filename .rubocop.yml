@@ -7,6 +7,7 @@ AllCops:
     - spec/rails_helper.rb
     - Gemfile
     - Guardfile
+  TargetRubyVersion: 2.4
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 Style/TrailingCommaInLiteral:
@@ -25,11 +26,20 @@ Style/AsciiComments:
   Enabled: false
 Style/SymbolArray:
   Enabled: false
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'config/**/*'
+    - 'spec/**/*'
+    - 'db/**/*'
+    - 'lib/**/*'
+    - 'config.ru'
+    - 'Rakefile'
 
 Metrics/LineLength:
   Max: 120
   Exclude:
     - 'config/**/*'
+    - 'spec/**/*'
 Metrics/BlockLength:
   Exclude:
     - 'config/**/*'

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class IkedaNote::TeamsController < IkedaNote::ApplicationController
   before_action :set_team, only: %i[edit update destroy]
 

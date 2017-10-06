@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class IkedaNote::EventsController < IkedaNote::ApplicationController
   before_action :set_event, only: %i[edit update destroy]
   before_action :set_people, only: %i[new create edit update]

@@ -28,7 +28,7 @@ describe IkedaNote::TeamsController, type: :controller do
       end
 
       it { expect(response).to redirect_to action: :index }
-      it { expect(assigns(:team).errors.full_messages).to include("Cannot delete record because dependent people exist") }
+      it { expect(assigns(:team).errors.full_messages).to include('Cannot delete record because dependent people exist') }
 
       it { expect { subject }.to change { Team.count }.by(0) }
     end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class IkedaNote::PeopleController < IkedaNote::ApplicationController
   before_action :set_person, only: %i[edit update destroy]
   before_action :set_teams, only: %i[new create edit update]
