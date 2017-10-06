@@ -57,3 +57,12 @@ gem追加したらやっくと楽だよ
 ```
 bin/docker-push
 ```
+
+### yamatatsu193/somethingonrails_web:latest が手に入らない時
+dockerhubのリポジトリ消した？
+ともあれ以下で出来上がるはず
+```
+docker-compose -f docker-compose.initialize.yml up
+```
+
+終わったら `bin/docker-push` しとくといいと思う。
