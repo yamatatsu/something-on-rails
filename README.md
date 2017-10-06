@@ -16,6 +16,8 @@
 
 ## something?
 - 歴史上の人物
+  - 池田ノート
+    - レキシの人の本名が池田らしい
 
 ## ER図
 https://github.com/yamatatsu/something-on-rails/blob/master/erd.pdf
@@ -39,6 +41,10 @@ docker-compose run --rm web db:seed
 
 #### 3.アクセス
 `localhost:3010` にアクセス
+
+seedで作られるアカウント
+id / pass
+shiki@shiki.boon / murasaki
 
 ### ガードサーバーの起動
 rubocop と livereload
